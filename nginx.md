@@ -351,27 +351,8 @@ location /www/ {
 
 <img src="img/image-20200721151417241.png" alt="image-20200721151417241" style="zoom:50%;" />
 
- 
-
 <img src="img/image-20200721151446839.png" alt="image-20200721151446839" style="zoom:50%;" />
 
 <img src="img/image-20200721151509657.png" alt="image-20200721151509657" style="zoom:50%;" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
