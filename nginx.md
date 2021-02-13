@@ -1,3 +1,6 @@
+官方文档
+https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/
+
 ### 1 反向代理与正向代理
 
 > 正向代理：通过代理服务器访问网络。
@@ -118,6 +121,42 @@ ngnix -s stop
 ```shell
 ./nginx 
 ```
+
+nginx -s singal 命令如下：
+
+```shell
+ stop — fast shutdown
+ quit — graceful shutdown
+ reload — reloading the configuration file
+ reopen — reopening the log files
+```
+
+```shell
+nginx 启动，默认配置文件
+nginx -c /path/to/nginx.conf //利用指定的配置文件启动nginx
+nginx -s reaload //对修改的配置重新加载
+nginx -s reopen //重新打开日志文件
+ningx -t /path/to/nginx.conf //测试nginx配置文件是否正确
+
+关闭命令
+nginx -s stop //正常关闭nginx
+
+如果正常关闭不起作用，可以采用如下方法：
+
+//1. 获取到nginx的进程号
+ps -ef | grep nginx
+//2. 从输出中找到第二个参数就是端口号,通过如下几种方式尝试关闭
+kill -QUIT 主进程号     ：从容停止Nginx
+kill -TERM 主进程号     ：快速停止Nginx
+pkill -9 nginx          ：强制停止Nginx
+//3.查看是否还有应用占据80端口
+netstat -apn | grep 80
+
+
+查看进程
+ps -aux | grep nginx
+```
+
 
 4 重新加载
 
