@@ -421,3 +421,47 @@ location /www/ {
 <img src="img/image-20200721151509657.png" alt="image-20200721151509657" style="zoom:50%;" />
 
 
+
+# 11 不同的子域名，映射到统一台机器的80端口上
+
+通过访问不同的域名，可以达到效果
+
+```nginx
+server {
+    listen       80;
+    server_name  www.lojzes.com;
+}
+```
+
+```nginx
+
+server {
+    listen       80;
+    server_name  web.lojzes.com;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
